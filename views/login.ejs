@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-zinc-900 to-zinc-800 py-8 px-2">
+    <form action="" method="POST" class="bg-white/90 backdrop-blur-md p-10 rounded-2xl shadow-2xl w-full max-w-md border border-zinc-200">
+            <div class="flex flex-col items-center mb-8">
+                <svg class="w-14 h-14 text-blue-600 mb-2" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 20.25v-1.5A2.25 2.25 0 016.75 16.5h10.5a2.25 2.25 0 012.25 2.25v1.5" /></svg>
+                <h2 class="text-3xl font-extrabold text-zinc-800 tracking-tight">Create Account</h2>
+                <p class="text-zinc-500 mt-1 text-sm"> Log in get started</p>
+            </div>
+            <div class="mb-5">
+                <label for="email" class="block text-zinc-700 font-semibold mb-2">Email</label>
+                <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-zinc-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" placeholder="you@email.com" />
+            </div>
+            <div class="mb-8">
+                <label for="password" class="block text-zinc-700 font-semibold mb-2">Password</label>
+                <input type="password" id="password" name="password" required class="w-full px-4 py-2 border border-zinc-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" placeholder="••••••••" />
+            </div>
+            <button type="submit" class="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 shadow-md hover:shadow-lg transition-all duration-200">Log In</button>
+            <p class="text-xs text-zinc-400 text-center mt-6">By logging in, you agree to our <a href="#" class="underline hover:text-blue-600">Terms</a> and <a href="#" class="underline hover:text-blue-600">Privacy Policy</a>.</p>
+        </form>
+    </div>
+
+</body>
+</html>

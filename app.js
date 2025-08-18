@@ -71,7 +71,7 @@ app.post('/create', async (req, res) => {
     }
     bcrypt.compare(req.body.password, user.password, (err, result) => {
         if(result){
-            let token = jwt.sign({ email }, "shhhhhhhhhhh");
+            let token = jwt.sign({ email }, "omgggggggg");
     res.cookie("token", token); // httpOnly: false lets you see it in browser DevTools
         res.send("Login successful");
 

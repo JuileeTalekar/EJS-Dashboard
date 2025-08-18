@@ -47,7 +47,7 @@ app.post('/create', async (req, res) => {
     });
     await user.save();
 
-    let token = jwt.sign({ email }, "shhhhhhhhhhh");
+    let token = jwt.sign({ email }, "yoursecretkey");
     res.cookie("token", token); // httpOnly: false lets you see it in browser DevTools
     res.send("User created successfully");
     // res.render('dashboard', { user: { username, email, age } });
@@ -71,7 +71,7 @@ app.post('/create', async (req, res) => {
     }
     bcrypt.compare(req.body.password, user.password, (err, result) => {
         if(result){
-            let token = jwt.sign({ email }, "omgggggggg");
+            let token = jwt.sign({ email }, "yoursecretkey");
     res.cookie("token", token); // httpOnly: false lets you see it in browser DevTools
         res.send("Login successful");
 
@@ -88,6 +88,24 @@ app.get("/logout", function(req,res){
     res.redirect("/");
 
 })
+
+
+
+
+app.get('/yooooo', function (req, res) {
+let token = jwt.sign({email: "juileetalekar@gmail.com"}, 'secretkey')
+res.cookie("token", token, )
+console.log(token);
+res.send("DONErrrr");
+  
+});
+
+
+app.get('/read', function (req, res) {
+   let data = jwt.verify(req.cookies.token ,"secretkey")
+   console.log(data);
+   res.send("DONE");
+});
 
 
 
